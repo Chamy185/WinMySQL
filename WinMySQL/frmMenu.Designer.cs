@@ -31,12 +31,12 @@
             components = new System.ComponentModel.Container();
             mnuPrincipal = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
+            salirToolStripMenuItem = new ToolStripMenuItem();
             cAtaToolStripMenuItem = new ToolStripMenuItem();
             materiasToolStripMenuItem = new ToolStripMenuItem();
             alumnosToolStripMenuItem = new ToolStripMenuItem();
             profesoresToolStripMenuItem = new ToolStripMenuItem();
             timer1 = new System.Windows.Forms.Timer(components);
-            salirToolStripMenuItem = new ToolStripMenuItem();
             mnuPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,6 +56,12 @@
             archivoToolStripMenuItem.Size = new Size(60, 20);
             archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // salirToolStripMenuItem
+            // 
+            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            salirToolStripMenuItem.Size = new Size(96, 22);
+            salirToolStripMenuItem.Text = "Salir";
+            // 
             // cAtaToolStripMenuItem
             // 
             cAtaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { materiasToolStripMenuItem, alumnosToolStripMenuItem, profesoresToolStripMenuItem });
@@ -68,6 +74,7 @@
             materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
             materiasToolStripMenuItem.Size = new Size(180, 22);
             materiasToolStripMenuItem.Text = "Materias";
+            materiasToolStripMenuItem.Click += materiasToolStripMenuItem_Click;
             // 
             // alumnosToolStripMenuItem
             // 
@@ -80,12 +87,6 @@
             profesoresToolStripMenuItem.Name = "profesoresToolStripMenuItem";
             profesoresToolStripMenuItem.Size = new Size(180, 22);
             profesoresToolStripMenuItem.Text = "Profesores";
-            // 
-            // salirToolStripMenuItem
-            // 
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 22);
-            salirToolStripMenuItem.Text = "Salir";
             // 
             // frmMenu
             // 
