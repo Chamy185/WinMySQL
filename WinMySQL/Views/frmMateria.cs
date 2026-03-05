@@ -31,9 +31,10 @@ namespace WinMySQL.Views
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (uptading == false) { 
-                bool resultado = dt.ejecutarComando($"Insert into Materias (Materia) values ('{txtMateria.Text}', {txtClave}')");
+                bool resultado = dt.ejecutarComando($"Insert into Materias (Materias,cve) " +
+                    $"values ('{txtMateria.Text}','{txtClave.Text}')");
 
-            if (resultado)
+                if (resultado)
             {
                 MessageBox.Show("Materia agregada correctamente");
                 this.Close();
@@ -46,7 +47,8 @@ namespace WinMySQL.Views
             }
            else
             {
-              bool resultado = dt.ejecutarComando($"Update Materias set Materia = '{txtMateria.Text}', CVE = {txtClave.Text} where Id = {id}");
+              bool resultado = dt.ejecutarComando($"Update Materias set Materia='{txtMateria.Text}', CVE='{txtClave.Text}' " +
+                    $"where id={id}");
                 if (resultado)
                 {
                     MessageBox.Show("Materia actualizada correctamente");

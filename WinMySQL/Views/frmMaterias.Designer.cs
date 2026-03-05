@@ -98,6 +98,7 @@
             dgvMaterias.ReadOnly = true;
             dgvMaterias.Size = new Size(800, 329);
             dgvMaterias.TabIndex = 0;
+            dgvMaterias.CellContentDoubleClick += dgvMaterias_CellContentDoubleClick;
             // 
             // frmMaterias
             // 
