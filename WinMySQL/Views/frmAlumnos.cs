@@ -65,7 +65,7 @@ namespace WinMySQL.Views
                 "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                 DialogResult.Yes)
             {
-                bool f = datos.ejecutarComando($"Delete from Alumnos where NoControl=" +
+                bool f = datos.ejecutarComando($"Delete from Alumnos where NoControl= " +
                     $"{noControl}");
                 if (f)
                 {
