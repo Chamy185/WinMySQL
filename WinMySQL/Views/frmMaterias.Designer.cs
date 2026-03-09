@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             splitContainer1 = new SplitContainer();
             btnAgregarMateria = new Button();
             txtMaterias = new TextBox();
             lblBuscar = new Label();
             dgvMaterias = new DataGridView();
+            cmsData = new ContextMenuStrip(components);
+            eliminarToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMaterias).BeginInit();
+            cmsData.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -92,6 +96,7 @@
             dgvMaterias.AllowUserToDeleteRows = false;
             dgvMaterias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvMaterias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMaterias.ContextMenuStrip = cmsData;
             dgvMaterias.Dock = DockStyle.Fill;
             dgvMaterias.Location = new Point(0, 0);
             dgvMaterias.Name = "dgvMaterias";
@@ -99,6 +104,19 @@
             dgvMaterias.Size = new Size(800, 329);
             dgvMaterias.TabIndex = 0;
             dgvMaterias.CellContentDoubleClick += dgvMaterias_CellContentDoubleClick;
+            // 
+            // cmsData
+            // 
+            cmsData.Items.AddRange(new ToolStripItem[] { eliminarToolStripMenuItem });
+            cmsData.Name = "cmsData";
+            cmsData.Size = new Size(118, 26);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            eliminarToolStripMenuItem.Size = new Size(117, 22);
+            eliminarToolStripMenuItem.Text = "Eliminar";
+            eliminarToolStripMenuItem.Click += eliminarToolStripMenuItem_Click_1;
             // 
             // frmMaterias
             // 
@@ -116,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvMaterias).EndInit();
+            cmsData.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -126,5 +145,7 @@
         private Button btnAgregarMateria;
         private TextBox txtMaterias;
         private Label lblBuscar;
+        private ContextMenuStrip cmsData;
+        private ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }
