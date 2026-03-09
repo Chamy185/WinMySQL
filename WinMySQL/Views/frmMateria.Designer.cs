@@ -89,6 +89,7 @@
             Controls.Add(label1);
             Name = "frmMateria";
             Text = "Materia";
+            Load += frmMateria_Load;
             ResumeLayout(false);
             PerformLayout();
         }
